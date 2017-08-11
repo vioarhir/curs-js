@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/javascript">
+        function show(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+
+        if (1 =='2') {
+            show("1 este egal cu '1'");
+        } else {
+            show('alt mesaj');
+        }
+
+        //afiseaza numarul mai mare
+        var firstNumber = 98;
+        var secondNumber = 75;
+        if (firstNumber > secondNumber) {
+            show(firstNumber);
+        } else {
+            show(secondNumber);
+        }
+
+        //afiseaza numele descrescator
+        var firstName = 'Xena';
+        var secondName = 'Jenny';
+        if (firstName > secondName) {
+            show(firstName + ' - ' + secondName);
+        } else {
+            show(secondName + ' - ' +  firstName);
+        }
+
+        //afiseaza numele descrescator v2
+        var firstName = 'Xena';
+        var secondName = 'Jenny';
+        if (firstName > secondName) {
+            show(firstName);
+            show(secondName);
+        } else {
+            show(secondName);
+            show(firstName);
+        }
+
+        // daca numarul e 0,afisam "zero" , else daca nr e par afiseaza " par", else afisam "impar"
+        var number = '9';
+        if (number == 0) {
+            show(number + 'zero');
+        } else if (number % 2 == 0) {
+            show(number +'par');
+        } else {
+            show(number + 'impar');
+        }
+
+        //FOR
+        for (number = 1; number <= 5; number++) {
+            show(number);
+        }
+
+        //afisare litere
+        var text = "Lorem ipsum";
+        // show(text[0]);
+        // show(text[1]);
+        // show(text[2]);
+        // show(text[3]);
+        // show(text[4]);
+
+        var textLength = text.length
+        for (var i = 0; i < textLength; i++) {
+            show(text[i]);
+       }
+
+        var textLength = text.length
+        for (var i = 0; i < textLength; i++) {
+            show('Caracterul de pe pozitia ' + i + ' este: ' + text[i]);
+       }
+
+       var textLength = text.length
+        for (var i = 0; i < textLength; i++) {
+            show('Caracterul de pe pozitia ' + (i + 1) + ' este: ' + text[i]);
+       }
+
+        var textLength = text.length
+        for (var i = textLength - 1; i >= 0; i--) {
+            show('Caracterul de pe pozitia ' + (i + 1) + ' este: ' + text[i]);
+       }
+
+       // cum cere un caracter userului:
+       var number = prompt("introdu un nr de la 0 la 10");
+       show(number);
+
+
+
+
+    </script>
+
+</body>
+</html>
