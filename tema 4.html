@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/javascript">
+ // 1. Declarati si initializati o variabila care sa contina o propozitie. Scrieti un script care sa parcurga fiecare caracter din propozitie si sa numere cate vocale si cate consoane sunt.
+        var phrase = "Ana are";
+        function show(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+        }
+        var textLength = phrase.length;
+        var cons = 0;
+        var voc = 0;
+        for (var i = 0; i < textLength; i++) {
+            //show(phrase[i]);
+            if (phrase[i].toLowerCase() == 'a' || phrase[i] == 'e' || phrase[i] == 'i' || phrase[i] == 'o' || phrase[i] == 'u') {
+                voc++;
+            } else if (phrase[i] != ' ') {
+                cons++;
+            }
+       }
+       show('Numarul de voc este ' + voc);
+       show('Numarul de cons este ' + cons);
+
+
+
+    </script>
+
+</body>
+</html>
